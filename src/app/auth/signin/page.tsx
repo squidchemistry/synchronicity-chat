@@ -3,29 +3,29 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-export default function Signup() {
+export default function Signin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const router = useRouter();
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const res = await fetch('/api/auth/signup', {
+    const res = await fetch('/api/auth/signin', {
       method: 'POST',
       body: JSON.stringify({ email, password }),
     });
 
     if (res.ok) {
-      router.push('/signin');
+      router.push('/'); // Redirect to homepage after login
     } else {
-      alert('Error signing up');
+      alert('Invalid credentials');
     }
   }
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
       <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-80">
-        <h1 className="text-2xl font-bold text-center">Sign Up</h1>
+        <h1 className="text-2xl font-bold text-center">Sign In</h1>
         <input
           className="border p-2 rounded"
           placeholder="Email"
@@ -39,8 +39,8 @@ export default function Signup() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit" className="bg-blue-500 text-white p-2 rounded">
-          Sign Up
+        <button type="submit" className="bg-green-500 text-white p-2 rounded">
+          Sign In
         </button>
       </form>
     </div>

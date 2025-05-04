@@ -8,6 +8,7 @@ async function main() {
       data: {
         username: 'devmaster',
         email: 'devmaster@example.com',
+        password: 'securepassword123',
         messages: {
           create: [
             { text: 'Just finished deploying the chat app 🚀' },
@@ -20,6 +21,7 @@ async function main() {
       data: {
         username: 'codewitch',
         email: 'codewitch@example.com',
+        password: 'securepassword123',
         messages: {
           create: [
             { text: 'Loving this interface! 🧙‍♀️' },
@@ -32,6 +34,7 @@ async function main() {
       data: {
         username: 'botlord',
         email: 'botlord@example.com',
+        password: 'securepassword123',
         messages: {
           create: [
             { text: 'Hello humans 🤖' },

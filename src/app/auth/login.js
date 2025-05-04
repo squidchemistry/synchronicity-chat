@@ -12,7 +12,7 @@ const SECRET_KEY = 'your-secret-key';
 
 app.use(bodyParser.json());
 
-app.post('/api/auth/login', (req, res) => {
+app.post('../app/auth/page', (req, res) => {
   const { email, password } = req.body;
 
   const user = users.find((u) => u.email === email);

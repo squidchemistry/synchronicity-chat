@@ -1,4 +1,3 @@
-// app/page.tsx
 import Link from 'next/link';
 import CryptoSection from '../components/CryptoSection';
 import Footer from '../components/Footer';
@@ -32,4 +31,4 @@ export default function HomePage() {
       <Footer />
     </div>
   );
-}
+};
